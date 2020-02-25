@@ -1,0 +1,27 @@
+<!--
+  ~ /**
+  ~ * Created by Mahendra Vijay, Kanmalai Technologies Pvt. Ltd on 29/1/20 2:21 PM.
+  ~ * Copyright (c) 2020. All rights reserved.
+  ~ * Last modified 29/1/20 2:21 PM by Mahendra Vijay.
+  ~ */
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20.005dp"
+    android:height="17.284dp"
+    android:autoMirrored="true"
+    android:viewportWidth="20.005"
+    android:viewportHeight="17.284">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M10.364,14.458a2.53,2.53 0,0 1,-1.588 -0.592l-2.934,-2.584a1.292,1.292 0,0 0,-1.669 -0.081L0,14.27v1.992a0.969,0.969 0,0 0,0.913 1.022c0.028,0 0.055,0 0.083,0L15.774,17.284a1.133,1.133 0,0 0,1.184 -1.023v-5.221l-5.3,3.068A2.449,2.449 0,0 1,10.364 14.458Z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M10.148,8.052m-1.184,0a1.184,1.184 0,1 1,2.368 0a1.184,1.184 0,1 1,-2.368 0" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M19.753,2.104a1,1 0,0 0,-0.727 -0.4l-14.669,-1.7a1.072,1.072 0,0 0,-1.211 0.915l-0.242,2.1L15.773,3.019a2.315,2.315 0,0 1,2.261 2.234v9.5c0,-0.054 0.242,-0.108 0.35,-0.215a0.915,0.915 0,0 0,0.35 -0.727l1.265,-10.928A1.05,1.05 0,0 0,19.753 2.104Z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M15.772,4.096L0.998,4.096a1.086,1.086 0,0 0,-1 1.157v7.671l3.553,-2.584a2.369,2.369 0,0 1,2.988 0.135l2.961,2.584a1.373,1.373 0,0 0,1.588 0.135l5.868,-3.418v-4.522A1.238,1.238 0,0 0,15.772 4.096ZM10.147,10.313a2.261,2.261 0,1 1,2.261 -2.261A2.261,2.261 0,0 1,10.149 10.312Z" />
+</vector>

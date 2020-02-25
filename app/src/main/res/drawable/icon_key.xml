@@ -1,0 +1,18 @@
+<!--
+  ~ /**
+  ~ * Created by Mahendra Vijay, Kanmalai Technologies Pvt. Ltd on 28/1/20 6:39 PM.
+  ~ * Copyright (c) 2020. All rights reserved.
+  ~ * Last modified 28/1/20 6:39 PM by Mahendra Vijay.
+  ~ */
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="18.403dp"
+    android:height="18.403dp"
+    android:autoMirrored="true"
+    android:viewportWidth="18.403"
+    android:viewportHeight="18.403">
+    <path
+        android:fillColor="#463ec9"
+        android:pathData="M12.609,0A5.789,5.789 0,0 0,6.816 5.793a7.139,7.139 0,0 0,0.341 2.045L0,14.995L0,18.4L3.408,18.4L3.408,16.358L5.453,16.358L5.453,14.313L7.5,14.313l3.067,-3.067a6.426,6.426 0,0 0,2.045 0.341A5.793,5.793 0,0 0,12.609 0ZM14.309,6.134a2.008,2.008 0,0 1,-2.045 -2.045,2.045 2.045,0 1,1 4.089,0A2.008,2.008 0,0 1,14.313 6.134Z" />
+</vector>

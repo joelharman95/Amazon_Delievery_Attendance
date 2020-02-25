@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Amazon Delievery</string>
+    <string name="label_delivery_boy">Delivery Boy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_login">Login</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="action_forgot_password">Forgot password ?</string>
+    <string name="label_alternate_phone_no">Alternate Phone Number</string>
+    <string name="label_temporary_address">Temporary Address</string>
+    <string name="label_permanent_address">Permanent Address</string>
+    <string name="label_blood_group">Blood Group</string>
+    <string name="label_account_no">Bank Account Number</string>
+    <string name="label_bank_name">Bank Name</string>
+    <string name="label_branch">Branch</string>
+    <string name="action_next">Next</string>
+    <string name="label_bike_no">Bike Number</string>
+    <string name="label_insurance_no">Insurance Number</string>
+    <string name="label_lisence_no">Lisence Number</string>
+    <string name="label_exp_date">Insurance Exp Date</string>
+    <string name="action_upload_dp">Upload Profile Picture</string>
+    <string name="action_complete">Complete</string>
+    <string name="label_validating_account">We are validating your account details.</string>
+    <string name="label_for_queries">For Queries</string>
+    <string name="label_upload_rc_book">Upload RC Book Photo</string>
+    <string name="label_upload_insurance">Upload Insurance Photo</string>
+    <string name="label_upload_license">Upload License Photo</string>
+</resources>

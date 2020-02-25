@@ -1,0 +1,138 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.amazondelievery.ui.credential.fragment.PersonalDetailsFragment">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_normal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_tiny"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Hi Mahe,"
+                android:textColor="@color/colorAccent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_tiny"
+                android:fontFamily="@font/poppins_medium"
+                android:text="We need some more details, please provide." />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPhoneNo"
+                style="@style/LoginTextInput"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:hint="@string/label_alternate_phone_no"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPhoneNo"
+                    style="@style/LoginEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddress"
+                style="@style/LoginTextInput"
+                android:hint="@string/label_permanent_address"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAddress"
+                    style="@style/LoginEditText"
+                    android:gravity="start"
+                    android:lines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPermanentAddr"
+                style="@style/LoginTextInput"
+                android:hint="@string/label_temporary_address"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPermanentAddr"
+                    style="@style/LoginEditText"
+                    android:gravity="start"
+                    android:lines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBloodGroup"
+                style="@style/LoginTextInput"
+                android:hint="@string/label_blood_group"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etBloodGroup"
+                    style="@style/LoginEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAccountNo"
+                style="@style/LoginTextInput"
+                android:hint="@string/label_account_no"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAccountNo"
+                    style="@style/LoginEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBankName"
+                style="@style/LoginTextInput"
+                android:hint="@string/label_bank_name"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etBankName"
+                    style="@style/LoginEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilIfscCode"
+                style="@style/LoginTextInput"
+                android:hint="IFSC Code"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etIfscCode"
+                    style="@style/LoginEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBranch"
+                style="@style/LoginTextInput"
+                android:hint="@string/label_branch"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etBranch"
+                    style="@style/LoginEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                style="@style/CircularButton"
+                android:layout_gravity="end"
+                android:text="@string/action_next"
+                app:cornerRadius="@dimen/spacing_medium" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
