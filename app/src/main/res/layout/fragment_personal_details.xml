@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amazondelievery.ui.credential.fragment.PersonalDetailsFragment">
+    tools:context="com.example.amazondelievery.ui.launch.fragment.credential.PersonalDetailsFragment">
 
     <include layout="@layout/layout_toolbar" />
 
@@ -42,32 +42,35 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etPhoneNo"
+                    android:inputType="phone"
                     style="@style/LoginEditText" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilAddress"
-                style="@style/LoginTextInput"
-                android:hint="@string/label_permanent_address"
-                app:hintTextColor="@color/black">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etAddress"
-                    style="@style/LoginEditText"
-                    android:gravity="start"
-                    android:lines="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilPermanentAddr"
                 style="@style/LoginTextInput"
-                android:hint="@string/label_temporary_address"
+                android:hint="@string/label_permanent_address"
                 app:hintTextColor="@color/black">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etPermanentAddr"
                     style="@style/LoginEditText"
                     android:gravity="start"
+                    android:inputType="@null"
+                    android:lines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTemporaryAddr"
+                style="@style/LoginTextInput"
+                android:hint="@string/label_temporary_address"
+                app:hintTextColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etTemporaryAddr"
+                    style="@style/LoginEditText"
+                    android:gravity="start"
+                    android:inputType="@null"
                     android:lines="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,6 +93,7 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etAccountNo"
+                    android:inputType="number"
                     style="@style/LoginEditText" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -123,6 +127,7 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etBranch"
+                    android:imeOptions="actionDone"
                     style="@style/LoginEditText" />
             </com.google.android.material.textfield.TextInputLayout>
 

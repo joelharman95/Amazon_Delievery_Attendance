@@ -3,135 +3,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/spacing_normal"
     android:orientation="vertical"
-    android:weightSum="4"
-    tools:context="com.example.amazondelievery.ui.credential.fragment.PhotoProofsFragment">
+    tools:context="com.example.amazondelievery.ui.launch.fragment.credential.PhotoProofsFragment">
 
-    <androidx.cardview.widget.CardView
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_tiny"
-        android:layout_weight="1"
-        android:background="@drawable/edit_text_background"
-        app:cardCornerRadius="@dimen/spacing_tiny"
-        app:cardElevation="@dimen/spacing_tiny">
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_normal"
+        android:orientation="vertical"
+        android:weightSum="4">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_tiny"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_background"
+            app:cardCornerRadius="@dimen/spacing_tiny"
+            app:cardElevation="@dimen/spacing_tiny">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/CardViewTexts"
-                android:text="@string/action_upload_dp" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/spacing_tiny"
-                android:src="@drawable/icon_gallery" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardViewTexts"
+                    android:text="@string/action_upload_dp" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_tiny"
+                    android:src="@drawable/icon_gallery" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_tiny"
-        android:layout_weight="1"
-        android:background="@drawable/edit_text_background"
-        app:cardCornerRadius="@dimen/spacing_tiny"
-        app:cardElevation="@dimen/spacing_tiny">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_tiny"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_background"
+            app:cardCornerRadius="@dimen/spacing_tiny"
+            app:cardElevation="@dimen/spacing_tiny">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/CardViewTexts"
-                android:text="@string/label_upload_license" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/spacing_tiny"
-                android:src="@drawable/icon_gallery" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardViewTexts"
+                    android:text="@string/label_upload_license" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_tiny"
+                    android:src="@drawable/icon_gallery" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_tiny"
-        android:layout_weight="1"
-        app:cardCornerRadius="@dimen/spacing_tiny"
-        app:cardElevation="@dimen/spacing_tiny">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_tiny"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/spacing_tiny"
+            app:cardElevation="@dimen/spacing_tiny">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/CardViewTexts"
-                android:text="@string/label_upload_insurance" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/spacing_tiny"
-                android:src="@drawable/icon_gallery" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardViewTexts"
+                    android:text="@string/label_upload_insurance" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_tiny"
+                    android:src="@drawable/icon_gallery" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_tiny"
-        android:layout_weight="1"
-        app:cardCornerRadius="@dimen/spacing_tiny"
-        app:cardElevation="@dimen/spacing_tiny">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_tiny"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/spacing_tiny"
+            app:cardElevation="@dimen/spacing_tiny">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/CardViewTexts"
-                android:text="@string/label_upload_rc_book"
-                android:textColor="@color/black" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/spacing_tiny"
-                android:src="@drawable/icon_gallery" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardViewTexts"
+                    android:text="@string/label_upload_rc_book"
+                    android:textColor="@color/black" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_tiny"
+                    android:src="@drawable/icon_gallery" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnComplete"
-        style="@style/CircularButton"
-        android:layout_gravity="end"
-        android:text="@string/action_complete"
-        app:cornerRadius="@dimen/spacing_medium" />
+        </androidx.cardview.widget.CardView>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnComplete"
+            style="@style/CircularButton"
+            android:layout_gravity="end"
+            android:text="@string/action_complete"
+            app:cornerRadius="@dimen/spacing_medium" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>

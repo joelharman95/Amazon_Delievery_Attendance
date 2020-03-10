@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Amazon Delievery</string>
+
     <string name="label_delivery_boy">Delivery Boy</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -18,7 +18,7 @@
     <string name="action_next">Next</string>
     <string name="label_bike_no">Bike Number</string>
     <string name="label_insurance_no">Insurance Number</string>
-    <string name="label_lisence_no">Lisence Number</string>
+    <string name="label_lisence_no">License Number</string>
     <string name="label_exp_date">Insurance Exp Date</string>
     <string name="action_upload_dp">Upload Profile Picture</string>
     <string name="action_complete">Complete</string>
@@ -27,4 +27,21 @@
     <string name="label_upload_rc_book">Upload RC Book Photo</string>
     <string name="label_upload_insurance">Upload Insurance Photo</string>
     <string name="label_upload_license">Upload License Photo</string>
+    <string name="label_ifsc_code">IFSC Code</string>
+    <string name="label_bike_model">Bike Model</string>
+    <string name="label_complete_delivery">Complete Delivery</string>
+    <string name="label_total_delivery">Total Delivery</string>
+    <string name="label_today_delivery_count">Today Delivery Count</string>
+    <string name="action_submit">Submit</string>
+    <string name="action_send">Send</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="label_select_time">Select Time</string>
+    <string name="label_select_date">Select Date</string>
+    <string name="label_message">Message</string>
+    <string name="label_last_leave_request">Last Leave Request</string>
+    <string name="action_pending">Pending</string>
+    <string name="action_ok">OK</string>
+    <string name="label_rc_book_no">RC Book Number</string>
+    <string name="label_assigned_delivery_boys">Assigned delivery boys:</string>
+    <string name="label_relax">Relax</string>
 </resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.amazondelievery.ui.launch.fragment.credential.LoginFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_details"
+            app:destination="@id/personalDetailsFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalDetailsFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.credential.PersonalDetailsFragment"
+        android:label="Personal Details"
+        tools:layout="@layout/fragment_personal_details">
+        <action
+            android:id="@+id/action_details_to_vehicle"
+            app:destination="@id/vehicleDetailsFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vehicleDetailsFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.credential.VehicleDetailsFragment"
+        android:label="Vehicle Details"
+        tools:layout="@layout/fragment_vehicle_details">
+        <action
+            android:id="@+id/action_vehicle_to_dp"
+            app:destination="@id/photoProofsFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoProofsFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.credential.PhotoProofsFragment"
+        android:label="Photo Proofs"
+        tools:layout="@layout/fragment_photo_proofs">
+        <action
+            android:id="@+id/action_dp_to_validation"
+            app:destination="@id/relaxFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/relaxFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.home.RelaxFragment"
+        android:label="Relax"
+        tools:layout="@layout/fragment_relax">
+        <action
+            android:id="@+id/action_relax_to_dashboard"
+            app:destination="@id/dashboardFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.home.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/employeeFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.home.employee.EmployeeFragment"
+        android:label="Employee"
+        tools:layout="@layout/fragment_employee" />
+
+    <fragment
+        android:id="@+id/taskFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.home.TaskOrLeaveFragment"
+        android:label="Task"
+        tools:layout="@layout/fragment_task_or_leave" />
+
+    <fragment
+        android:id="@+id/dayDeliveryFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.home.daydelivery.DayDeliveryFragment"
+        android:label="Day Delivery"
+        tools:layout="@layout/fragment_day_delivery" />
+
+    <fragment
+        android:id="@+id/leaveRequestFrag"
+        android:name="com.example.amazondelievery.ui.launch.fragment.home.leaverequest.LeaveRequestFragment"
+        android:label="Request"
+        tools:layout="@layout/fragment_leave_request" />
+
+</navigation>

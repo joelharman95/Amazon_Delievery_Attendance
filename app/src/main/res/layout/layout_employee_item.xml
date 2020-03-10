@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/spacing_small">
+
+    <View
+        android:id="@+id/viewHor1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBorder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:src="@drawable/icon_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewHor1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/spacing_small"
+        android:text="Name"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@id/tvBase"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintTop_toTopOf="@id/ivProfilePic"
+        tools:text="vgfhfhjfhjfhgf,hjcfhjf,jg,hf.,fchjuf,hf,hjuf,hdgdgud" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContactNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/spacing_small"
+        android:text="+91 9876543210"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvInsuranceExpDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/spacing_small"
+        android:text="Insurance Exp Date"
+        android:textColor="@color/colorBorder"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintStart_toStartOf="@id/tvContactNo"
+        app:layout_constraintTop_toBottomOf="@id/tvContactNo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/spacing_small"
+        android:text="Leave(Admin)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintStart_toStartOf="@+id/tvInsuranceExpDate"
+        app:layout_constraintTop_toBottomOf="@id/tvInsuranceExpDate" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/spacing_small"
+        android:text="Salaried"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/tvName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toTopOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBikeNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/spacing_small"
+        android:text="Bike Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBase" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBikeModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/spacing_small"
+        android:text="Bike Model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBikeNo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/spacing_small"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:text="Approve"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvBikeModel"
+        app:layout_constraintTop_toBottomOf="@+id/tvBikeModel" />
+
+    <View
+        android:id="@+id/viewHor2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:background="@color/colorBorder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_goneMarginTop="@dimen/spacing_normal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

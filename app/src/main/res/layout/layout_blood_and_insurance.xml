@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/viewHor1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBorder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvIFSCCode"
+        style="@style/BankTextView"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/label_blood_group"
+        android:textColor="@color/dark_yellow"
+        app:layout_constraintBottom_toBottomOf="@id/viewHor2"
+        app:layout_constraintEnd_toStartOf="@id/viewVer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewHor1" />
+
+    <View
+        android:id="@+id/viewVer"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorBorder"
+        app:layout_constraintBottom_toTopOf="@+id/viewHor2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewHor1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvInsuranceNo"
+        style="@style/BankTextView"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/label_insurance_no"
+        app:layout_constraintBottom_toTopOf="@+id/tvBikeModel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewVer"
+        app:layout_constraintTop_toBottomOf="@id/viewHor1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvInsuranceExpDate"
+        style="@style/BankTextView"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/label_exp_date"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewVer"
+        app:layout_constraintTop_toBottomOf="@id/tvInsuranceNo" />
+
+    <View
+        android:id="@+id/viewHor2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@color/colorBorder"
+        app:layout_constraintTop_toBottomOf="@id/tvInsuranceExpDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

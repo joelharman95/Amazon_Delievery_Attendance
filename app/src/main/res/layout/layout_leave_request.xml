@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spPermission"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSelectTime"
+        style="@style/LoginTextInput"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:hint="@string/label_select_time"
+        app:hintTextColor="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSelectTime"
+            style="@style/LoginEditText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSelectDate"
+        style="@style/LoginTextInput"
+        android:hint="@string/label_select_date"
+        app:hintTextColor="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSelectDate"
+            style="@style/LoginEditText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMessage"
+        style="@style/LoginTextInput"
+        android:hint="@string/label_message"
+        app:hintTextColor="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etAddress"
+            style="@style/LoginEditText"
+            android:gravity="start"
+            android:imeOptions="actionUnspecified"
+            android:inputType="none"
+            android:lines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/CircularButton"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/light_black"
+        android:text="@string/action_send"
+        app:cornerRadius="@dimen/spacing_medium" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

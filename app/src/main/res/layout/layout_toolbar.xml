@@ -4,10 +4,11 @@
     android:id="@+id/tbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    android:theme="@style/ToolbarStyle"
     app:navigationIcon="@drawable/icon_back"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:title="@string/label_login"
+    app:titleTextAppearance="@style/ToolbarTextAppearance"
     app:titleTextColor="@color/colorAccent">
 
 </androidx.appcompat.widget.Toolbar>

@@ -3,25 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
-    android:padding="@dimen/spacing_normal"
-    tools:context="com.example.amazondelievery.ui.credential.fragment.LoginFragment">
+    tools:context="com.example.amazondelievery.ui.launch.fragment.credential.LoginFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/nsvHolder"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-128dp"
         android:scaleType="fitXY"
-        android:src="@drawable/login_bg"
+        android:src="@drawable/login_bg" />
+
+    <ProgressBar
+        android:id="@+id/pbLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:visibility="gone" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvHolder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_small">
+            android:layout_margin="@dimen/spacing_small"
+            android:padding="@dimen/spacing_normal">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvLogin"
@@ -65,7 +74,9 @@
                     android:layout_marginEnd="@dimen/spacing_small"
                     android:background="@color/transparent"
                     android:drawableEnd="@drawable/icon_key"
-                    android:hint="@string/label_password" />
+                    android:hint="@string/label_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

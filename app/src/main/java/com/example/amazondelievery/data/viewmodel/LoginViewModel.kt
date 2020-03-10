@@ -1,20 +1,40 @@
 package com.example.amazondelievery.data.viewmodel
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
+import com.example.amazondelievery.data.api.request.ReqAllDetails
+import com.example.amazondelievery.data.api.request.ReqLogin
+import com.example.amazondelievery.data.api.response.ResponseLogin
+import com.example.amazondelievery.data.preference.IPreferenceManager
+import com.example.amazondelievery.data.repository.ILoginRepository
+import com.example.amazondelievery.di.utility.OnError
+import com.example.amazondelievery.di.utility.OnSuccess
+import kotlinx.coroutines.launch
 
-class LoginViewModel : ViewModel() {
+class LoginViewModel(
+    private val loginRepository: ILoginRepository,
+    private val pref: IPreferenceManager
+) : ViewModel() {
 
-    override fun onCleared() {
-        super.onCleared()
+    fun saveToken(token: String) = pref.saveToken(token)
+
+    fun login(
+        requestLogin: ReqLogin,
+        onSuccess: OnSuccess<ResponseLogin>,
+        onError: OnError<String>
+    ) {
+        viewModelScope.launch {
+            loginRepository.login(requestLogin, onSuccess, onError)
+        }
     }
 
-    class Factory(context: Context) : ViewModelProvider.NewInstanceFactory() {
-
-        @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return LoginViewModel() as T
+    fun postPersonalDetails(
+        reqAllDetails: ReqAllDetails,
+        onSuccess: OnSuccess<ResponseLogin>,
+        onError: OnError<String>
+    ) {
+        viewModelScope.launch {
+            loginRepository.postPersonalDetails(reqAllDetails, onSuccess, onError)
         }
     }
 }

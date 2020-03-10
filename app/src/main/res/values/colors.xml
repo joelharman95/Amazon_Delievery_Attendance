@@ -8,5 +8,11 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="red">#EB1111</color>
+    <color name="dark_yellow">#EBA211</color>
+    <color name="green">#F734AA35</color>
+    <color name="light_black">#2B2A2A</color>
+    <color name="color_surface">@color/black</color>
+    <color name="color_on_surface">#555252</color>
 
 </resources>

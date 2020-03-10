@@ -8,6 +8,7 @@
     <dimen name="spacing_large">32dp</dimen>
     <dimen name="spacing_extra_large">64dp</dimen>
 
+    <dimen name="font_small">12sp</dimen>
     <dimen name="size_16">16sp</dimen>
     <dimen name="size_18">18sp</dimen>
     <dimen name="size_26">26sp</dimen>

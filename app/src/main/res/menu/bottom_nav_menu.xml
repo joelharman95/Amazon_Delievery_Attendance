@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboardFrag"
+        android:icon="@drawable/icon_dashboard"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/employeeFrag"
+        android:icon="@drawable/icon_loader"
+        android:title="Employee" />
+
+    <item
+        android:id="@+id/dayDeliveryFrag"
+        android:icon="@drawable/icon_delivery"
+        android:title="Day Delivery" />
+
+    <item
+        android:id="@+id/taskFrag"
+        android:icon="@drawable/icon_report"
+        android:title="Task" />
+
+    <item
+        android:id="@+id/leaveRequestFrag"
+        android:icon="@drawable/icon_question"
+        android:title="Request" />
+
+</menu>

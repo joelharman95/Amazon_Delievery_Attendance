@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/spacing_small">
+
+    <View
+        android:id="@+id/viewHor1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBorder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:src="@drawable/icon_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewHor1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/spacing_small"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintTop_toTopOf="@id/ivProfilePic" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContactNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/spacing_small"
+        android:text="+91 9876543210"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_medium"
+        android:lines="3"
+        android:padding="@dimen/spacing_small"
+        android:text="Message for here"
+        android:textColor="@color/colorBorder"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+        app:layout_constraintTop_toBottomOf="@id/tvContactNo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDateAndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/spacing_small"
+        android:text="Date And Time"
+        android:textColor="@color/colorBorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSalaried"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/spacing_small"
+        android:text="Salaried"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDateAndTime" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPending"
+        style="@style/CircularButton"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:text="@string/action_pending"
+        app:cornerRadius="@dimen/spacing_normal"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvSalaried" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        style="@style/CircularButton"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:text="@string/action_cancel"
+        app:cornerRadius="@dimen/spacing_normal"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPending" />
+
+    <View
+        android:id="@+id/viewHor2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:background="@color/colorBorder"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_goneMarginTop="@dimen/spacing_normal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
