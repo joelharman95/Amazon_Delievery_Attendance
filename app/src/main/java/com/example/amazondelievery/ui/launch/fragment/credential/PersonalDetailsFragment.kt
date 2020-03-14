@@ -19,8 +19,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PersonalDetailsFragment : Fragment() {
 
-    private val vmLogin by viewModel<LoginViewModel>()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,9 +31,6 @@ class PersonalDetailsFragment : Fragment() {
         activity?.initToolbar(tbar, PERSONAL_DETAILS, findNavController())
 
         btnNext.setOnClickListener {
-
-            findNavController().navigate(R.id.action_details_to_vehicle)     //  For testing purpose, need to remove it
-
             if (isFieldValid()) {
                 val reqAllDetails = ReqAllDetails(
                     altMobileNumber = etPhoneNo.text.toString(),

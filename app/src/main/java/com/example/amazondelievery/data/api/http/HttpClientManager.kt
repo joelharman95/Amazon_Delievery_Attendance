@@ -2,6 +2,8 @@ package com.example.amazondelievery.data.api.http
 
 import android.content.SharedPreferences
 import com.example.amazondelievery.BuildConfig
+import com.example.amazondelievery.data.api.http.HttpClientManager.Companion.HEADER_KEY_AUTHORIZATION
+import com.example.amazondelievery.di.utility.Pref.TOKEN
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -9,7 +11,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import java.util.concurrent.TimeUnit
-
 
 interface HttpClientManager {
 
@@ -19,9 +20,8 @@ interface HttpClientManager {
 
     companion object {
         const val HEADER_KEY_ACCEPT = "Accept"
-        const val HEADER_KEY_AUTHORIZATION = "Authorization"
-        const val HEADER_BASIC_AUTH_VALUE =
-            "Basic cHJlc3Rhc2hvcGFwaTo5OGU2OWQxZGQ5MjUzMWU0YjJjYjQ4MmE2YzBhYzI4ZjE="
+        const val HEADER_KEY_AUTHORIZATION = TOKEN
+      //  const val HEADER_BASIC_AUTH_VALUE = "Basic cHJlc3Rhc2hvcGFwaTo5OGU2OWQxZGQ5MjUzMWU0YjJjYjQ4MmE2YzBhYzI4ZjE="
         const val HEADER_VALUE_TYPE_APPLICATION_JSON = "application/json"
 
         fun newInstance(sharedPreferences: SharedPreferences): HttpClientManager =
@@ -37,25 +37,24 @@ private class HttpClientManagerImpl(var sharedPreferences: SharedPreferences) : 
 
     override var client: OkHttpClient = OkHttpClient.Builder()
 
-        /*.addInterceptor {
-            val sessionId =
-                sharedPreferences.getString(TOKEN, "")!!
-            if (sessionId == "") {
+        .addInterceptor {
+            val accessToken = sharedPreferences.getString(TOKEN, "")!!
+            if (accessToken == "") {
                 it.proceed(
                     it.request().newBuilder().addHeader(
                         HEADER_KEY_AUTHORIZATION,
-                        HEADER_BASIC_AUTH_VALUE
+                        ""
                     ).build()
                 )
             } else {
                 it.proceed(
                     it.request().newBuilder().addHeader(
                         HEADER_KEY_AUTHORIZATION,
-                        sessionId
+                        accessToken
                     ).build()
                 )
             }
-        }*/
+        }
         /*.addInterceptor {
             val url = it.request().url.toString()
             println(url)
@@ -82,7 +81,8 @@ private class HttpClientManagerImpl(var sharedPreferences: SharedPreferences) : 
             }
         }
         .callTimeout(20, TimeUnit.SECONDS)
-        .readTimeout(50, TimeUnit.MILLISECONDS)
+        .readTimeout(20, TimeUnit.SECONDS)
+        .writeTimeout(20, TimeUnit.SECONDS)
         .build()
 
     override var gsonConverterFactory: GsonConverterFactory =

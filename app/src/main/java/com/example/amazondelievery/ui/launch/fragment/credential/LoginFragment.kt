@@ -5,6 +5,7 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.amazondelievery.R
@@ -36,28 +37,39 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         btnLogin.setOnClickListener {
-
-            findNavController().navigate(R.id.action_login_to_details)     //  For testing purpose, need to remove it
-
             if (isFieldValid()) {
-                pbLogin.blockUI(this.requireActivity())
+                pbLogin.blockUI(activity as AppCompatActivity)
                 val requestLogin = ReqLogin(etEmail.text.toString(), etPassword.text.toString())
 
                 vmLogin.login(requestLogin, onSuccess = { resLogin ->
 
                     vmLogin.saveToken(resLogin.content.toString())
-
                     activity?.toast(resLogin.message.toString())
-                    pbLogin.unBlockUI(this.requireActivity())
-                    when (findNavController().currentDestination?.id) {
-                        R.id.loginFragment -> findNavController().navigate(R.id.action_login_to_details)
-                    }
+
+                    vmLogin.employeeProfileStatus(onSuccess = { profileStatus ->
+                        pbLogin.unBlockUI(this.requireActivity())
+                        if(profileStatus.content?.profileUpdatedStatus!!) {
+                            when (findNavController().currentDestination?.id) {
+                                R.id.loginFragment -> findNavController().navigate(R.id.action_login_to_relax)
+                            }
+                        } else {
+                            when (findNavController().currentDestination?.id) {
+                                R.id.loginFragment -> findNavController().navigate(R.id.action_login_to_details)
+                            }
+                        }
+                    }, onError = {
+                        unBlock(it)
+                    })
                 }, onError = {
-                    activity?.toast(it)
-                    pbLogin.unBlockUI(this.requireActivity())
+                    unBlock(it)
                 })
             }
         }
+    }
+
+    private fun unBlock(msg: String) {
+        activity?.toast(msg)
+        pbLogin.unBlockUI(this.requireActivity())
     }
 
     private fun isFieldValid(): Boolean {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.launch.fragment.home.DashboardFragment">
+    tools:context=".ui.launch.fragment.home.dashboard.DashboardFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -106,6 +106,15 @@
             android:translationY="@dimen/spacing_medium"
             app:layout_constraintTop_toBottomOf="@id/tvAddress" />
 
+        <ProgressBar
+            android:id="@+id/pbDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <include
             android:id="@+id/ilBloodAndInsurance"
             layout="@layout/layout_blood_and_insurance"
@@ -116,7 +125,7 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llCompleteDelivery"
-            android:layout_width="176dp"
+            android:layout_width="166dp"
             android:layout_height="146dp"
             android:layout_marginTop="@dimen/spacing_normal"
             android:layout_marginBottom="@dimen/spacing_normal"
@@ -155,7 +164,7 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llTotalDelivery"
-            android:layout_width="176dp"
+            android:layout_width="166dp"
             android:layout_height="146dp"
             android:layout_marginTop="@dimen/spacing_normal"
             android:layout_marginBottom="@dimen/spacing_normal"

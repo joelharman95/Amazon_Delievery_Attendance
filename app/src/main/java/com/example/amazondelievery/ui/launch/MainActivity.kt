@@ -9,9 +9,12 @@ import androidx.navigation.ui.NavigationUI
 import com.example.amazondelievery.R
 import com.example.amazondelievery.di.hide
 import com.example.amazondelievery.di.show
+import com.example.amazondelievery.ui.launch.fragment.home.dashboard.BackPressEvent
 import kotlinx.android.synthetic.main.activity_credential.*
 
 class MainActivity : AppCompatActivity() {
+
+    var backPressEvent: BackPressEvent? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,8 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         //  setSupportActionBar(tbar)
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.credentialNavHost) as NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.credentialNavHost) as NavHostFragment
         val navController = navHostFragment.navController
         NavigationUI.setupWithNavController(bottomNavHome, navController)   //  Navigation bar
         //  NavigationUI.setupActionBarWithNavController(this, navController)  //  Toolbar
@@ -46,10 +48,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun setListener(mBackPressEvent: BackPressEvent) {
+        backPressEvent = mBackPressEvent
+    }
+
     override fun onBackPressed() {
         if (findNavController(R.id.credentialNavHost).currentDestination?.id != null) {
             when (findNavController(R.id.credentialNavHost).currentDestination?.id) {
-                R.id.loginFragment, R.id.dashboardFrag, R.id.taskFrag -> {
+                R.id.dashboardFrag -> {
+                    if (backPressEvent?.backTriggered()!!) {
+                        finish()
+                    }
+                }
+                R.id.loginFragment, R.id.taskFrag, R.id.relaxFrag -> {
                     finish()
                 }
                 else -> findNavController(R.id.credentialNavHost).navigateUp()

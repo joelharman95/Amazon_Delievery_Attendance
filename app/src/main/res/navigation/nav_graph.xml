@@ -18,6 +18,14 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
+        <action
+            android:id="@+id/action_login_to_relax"
+            app:destination="@id/relaxFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
     </fragment>
 
     <fragment
@@ -78,7 +86,7 @@
 
     <fragment
         android:id="@+id/dashboardFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.home.DashboardFragment"
+        android:name="com.example.amazondelievery.ui.launch.fragment.home.dashboard.DashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard" />
 

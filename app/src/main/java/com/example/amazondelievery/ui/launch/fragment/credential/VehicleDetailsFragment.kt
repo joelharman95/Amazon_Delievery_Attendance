@@ -1,19 +1,24 @@
 package com.example.amazondelievery.ui.launch.fragment.credential
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.amazondelievery.R
 import com.example.amazondelievery.data.api.request.ReqAllDetails
 import com.example.amazondelievery.di.initToolbar
+import com.example.amazondelievery.di.showDate
+import com.example.amazondelievery.di.utility.Constants.PERSONAL_DETAILS
 import com.example.amazondelievery.di.utility.Constants.VEHICLE_DETAILS
 import kotlinx.android.synthetic.main.fragment_vehicle_details.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
+import java.util.*
 
 class VehicleDetailsFragment : Fragment() {
 
@@ -28,16 +33,9 @@ class VehicleDetailsFragment : Fragment() {
 
         activity?.initToolbar(tbar, VEHICLE_DETAILS, findNavController())
 
-        //  val reqAllDetails = arguments?.get(PERSONAL_DETAILS) as ReqAllDetails
-        val reqAllDetails =
-            ReqAllDetails()     //  For testing purpose, need to remove it and uncomment the above statement
-
-        println("GET___BUNDLE____FROM____PERSONAL___$reqAllDetails")
+        val reqAllDetails = arguments?.get(PERSONAL_DETAILS) as ReqAllDetails
 
         btnNext.setOnClickListener {
-
-            findNavController().navigate(R.id.action_vehicle_to_dp)     //  For testing purpose, need to remove it
-
             if (isFieldValid()) {
                 reqAllDetails.bikeModel = etBikeModel.text.toString()
                 reqAllDetails.bikeNumber = etBikeNumber.text.toString()
@@ -54,6 +52,11 @@ class VehicleDetailsFragment : Fragment() {
                 }
             }
         }
+
+        etInsuranceExpDate.setOnClickListener {
+            etInsuranceExpDate.showDate()
+        }
+
     }
 
     private fun isFieldValid(): Boolean {

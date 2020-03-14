@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.amazondelievery.data.api.request.ReqAllDetails
 import com.example.amazondelievery.data.api.request.ReqLogin
 import com.example.amazondelievery.data.api.response.ResponseLogin
+import com.example.amazondelievery.data.api.response.ResponseProfileStatus
 import com.example.amazondelievery.data.preference.IPreferenceManager
 import com.example.amazondelievery.data.repository.ILoginRepository
 import com.example.amazondelievery.di.utility.OnError
@@ -17,6 +18,9 @@ class LoginViewModel(
 ) : ViewModel() {
 
     fun saveToken(token: String) = pref.saveToken(token)
+    fun saveVerifyStatus(verifyStatus: Boolean) = pref.saveVerifyStatus(verifyStatus)
+    fun getVerifyStatus() = pref.getVerifyStatus()
+
 
     fun login(
         requestLogin: ReqLogin,
@@ -28,13 +32,24 @@ class LoginViewModel(
         }
     }
 
+    fun employeeProfileStatus(
+        onSuccess: OnSuccess<ResponseProfileStatus>,
+        onError: OnError<String>
+    ) {
+        viewModelScope.launch {
+            loginRepository.employeeProfileStatus(onSuccess, onError)
+        }
+    }
+
     fun postPersonalDetails(
         reqAllDetails: ReqAllDetails,
+        files: HashMap<String, String>,
         onSuccess: OnSuccess<ResponseLogin>,
         onError: OnError<String>
     ) {
         viewModelScope.launch {
-            loginRepository.postPersonalDetails(reqAllDetails, onSuccess, onError)
+            loginRepository.postPersonalDetails(reqAllDetails, files, onSuccess, onError)
         }
     }
+
 }
