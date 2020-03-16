@@ -48,9 +48,15 @@ class LoginFragment : Fragment() {
 
                     vmLogin.employeeProfileStatus(onSuccess = { profileStatus ->
                         pbLogin.unBlockUI(this.requireActivity())
-                        if(profileStatus.content?.profileUpdatedStatus!!) {
-                            when (findNavController().currentDestination?.id) {
-                                R.id.loginFragment -> findNavController().navigate(R.id.action_login_to_relax)
+                        if (profileStatus.content?.profileUpdatedStatus!!) {
+                            if (profileStatus.content.approvedStatus!!) {
+                                when (findNavController().currentDestination?.id) {
+                                    R.id.loginFragment -> findNavController().navigate(R.id.action_login_to_dashboard_frag)
+                                }
+                            } else {
+                                when (findNavController().currentDestination?.id) {
+                                    R.id.loginFragment -> findNavController().navigate(R.id.action_login_to_relax)
+                                }
                             }
                         } else {
                             when (findNavController().currentDestination?.id) {

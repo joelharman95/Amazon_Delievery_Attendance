@@ -30,6 +30,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:foreground="?attr/selectableItemBackground"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -52,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_tiny"
             android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground"
             android:background="@drawable/edit_text_background"
             app:cardCornerRadius="@dimen/spacing_tiny"
             app:cardElevation="@dimen/spacing_tiny">
@@ -83,6 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_tiny"
             android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/spacing_tiny"
             app:cardElevation="@dimen/spacing_tiny">
 
@@ -113,6 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_tiny"
             android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/spacing_tiny"
             app:cardElevation="@dimen/spacing_tiny">
 

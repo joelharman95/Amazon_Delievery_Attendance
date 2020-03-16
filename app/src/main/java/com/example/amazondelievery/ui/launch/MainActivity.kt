@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                         finish()
                     }
                 }
-                R.id.loginFragment, R.id.taskFrag, R.id.relaxFrag -> {
+                R.id.loginFragment, R.id.taskFrag, R.id.relaxFrag, R.id.employeeFrag, R.id.dayDeliveryFrag, R.id.leaveRequestFrag -> {
                     finish()
                 }
                 else -> findNavController(R.id.credentialNavHost).navigateUp()

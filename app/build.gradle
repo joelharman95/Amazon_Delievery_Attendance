@@ -27,7 +27,8 @@ android {
         dev {
             dimension "environment"
             applicationIdSuffix ".dev"
-            buildConfigField 'String', 'BASE_URL', '"http://192.168.86.39:8036/"'
+            //  buildConfigField 'String', 'BASE_URL', '"http://192.168.86.39:8036/"'
+            buildConfigField 'String', 'BASE_URL', '"http://103.99.149.26:8036/"'
             resValue "string", "app_name", "Amazon Delivery Dev"
         }
         prod {

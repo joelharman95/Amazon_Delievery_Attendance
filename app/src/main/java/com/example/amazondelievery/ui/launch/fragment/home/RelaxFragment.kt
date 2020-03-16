@@ -18,12 +18,4 @@ class RelaxFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_relax, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        tvRelax.setOnClickListener {
-            when (findNavController().currentDestination?.id) {
-                R.id.relaxFrag -> findNavController().navigate(R.id.action_relax_to_dashboard)
-            }
-        }
-    }
-
 }

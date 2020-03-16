@@ -34,7 +34,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class PhotoProofsFragment : Fragment(), View.OnClickListener {
 
     private val vmLogin by viewModel<LoginViewModel>()
-    var fileNo = ""
+    private var fileNo = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

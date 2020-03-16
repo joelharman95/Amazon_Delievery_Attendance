@@ -1,5 +1,6 @@
 package com.example.amazondelievery.data.repository
 
+import com.example.amazondelievery.data.api.response.ResponseProfileStatus
 import com.example.amazondelievery.data.api.service.AuthenticationApi
 import com.example.amazondelievery.di.utility.OnError
 import com.example.amazondelievery.di.utility.OnSuccess
@@ -10,7 +11,7 @@ class SplashRepository(private val api: AuthenticationApi) : ISplashRepository {
 
     override suspend fun validateToken(
         token: String,
-        onSuccess: OnSuccess<Boolean>,
+        onSuccess: OnSuccess<ResponseProfileStatus>,
         onError: OnError<String>
     ) {
         withContext(Dispatchers.IO) {
@@ -19,7 +20,7 @@ class SplashRepository(private val api: AuthenticationApi) : ISplashRepository {
                 if (response.isSuccessful) {
                     response.body().let {
                         if (!it?.isError!!)
-                            withContext(Dispatchers.Main) { onSuccess(true) }
+                            withContext(Dispatchers.Main) { onSuccess(it) }
                         else
                             withContext(Dispatchers.Main) { onError(it.message.toString()) }
                     }
@@ -39,7 +40,7 @@ interface ISplashRepository {
 
     suspend fun validateToken(
         token: String,
-        onSuccess: OnSuccess<Boolean>,
+        onSuccess: OnSuccess<ResponseProfileStatus>,
         onError: OnError<String>
     )
 

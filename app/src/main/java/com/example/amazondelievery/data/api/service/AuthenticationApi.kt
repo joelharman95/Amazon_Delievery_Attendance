@@ -16,7 +16,7 @@ interface AuthenticationApi {
     @GET("")
     suspend fun validateToken(
         @Query("Token") token: String
-    ): Response<ResponseLogin>
+    ): Response<ResponseProfileStatus>
 
     @POST(LOGIN_URL)
     suspend fun login(

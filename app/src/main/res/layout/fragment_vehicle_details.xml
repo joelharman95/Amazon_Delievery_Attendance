@@ -24,7 +24,6 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etBikeModel"
-                    android:text="rwrwe"
                     style="@style/LoginEditText"
                     android:hint="Bike Model" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -36,7 +35,6 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etBikeNumber"
                     style="@style/LoginEditText"
-                    android:text="rwrwe"
                     android:hint="@string/label_bike_no"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -48,7 +46,6 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etLisenceNumber"
                     style="@style/LoginEditText"
-                    android:text="rwrwe"
                     android:hint="@string/label_lisence_no" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,7 +56,6 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etInsuranceNumber"
                     style="@style/LoginEditText"
-                    android:text="rwrwe"
                     android:hint="@string/label_insurance_no" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +66,6 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etInsuranceExpDate"
                     style="@style/LoginEditText"
-                    android:text="2020-02-21"
                     android:hint="@string/label_exp_date" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,7 +77,6 @@
                     android:id="@+id/etRCBoolNo"
                     style="@style/LoginEditText"
                     android:hint="@string/label_rc_book_no"
-                    android:text="rwrwe"
                     android:imeOptions="actionDone" />
             </com.google.android.material.textfield.TextInputLayout>
 

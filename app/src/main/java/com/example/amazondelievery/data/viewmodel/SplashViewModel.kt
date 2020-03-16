@@ -2,6 +2,7 @@ package com.example.amazondelievery.data.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.amazondelievery.data.api.response.ResponseProfileStatus
 import com.example.amazondelievery.data.preference.IPreferenceManager
 import com.example.amazondelievery.data.repository.ISplashRepository
 import com.example.amazondelievery.di.utility.OnError
@@ -14,13 +15,11 @@ class SplashViewModel(
     private val pref: IPreferenceManager
 ) : ViewModel() {
 
-    private fun getToken() = pref.getToken()
+    fun getToken() = pref.getToken()
 
-    fun isTokenValid(onSuccess: OnSuccess<Boolean>, onError: OnError<String>) {
+    fun isTokenValid(onSuccess: OnSuccess<ResponseProfileStatus>, onError: OnError<String>) {
         viewModelScope.launch {
             splashRepository.validateToken(getToken(), onSuccess, onError)
-            delay(200)
-            onSuccess(true)
         }
     }
 
