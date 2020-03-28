@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.amazondelievery.ui.launch.fragment.home.RelaxFragment">
+    tools:context="com.example.amazondelievery.ui.home.RelaxFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivHeader"
@@ -89,12 +89,20 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivRelax"
         android:layout_width="wrap_content"
-        android:layout_height="280dp"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/spacing_small"
         android:src="@drawable/relax"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineHor1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHor1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintGuide_percent="0.80"
+        android:orientation="horizontal" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvRelax"
@@ -104,10 +112,11 @@
         android:text="@string/label_relax"
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/size_26"
+        android:layout_marginTop="@dimen/spacing_normal"
         android:translationY="-43dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivRelax" />
+        app:layout_constraintTop_toBottomOf="@id/guideLineHor1" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvAccount"

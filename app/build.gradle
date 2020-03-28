@@ -27,15 +27,29 @@ android {
         dev {
             dimension "environment"
             applicationIdSuffix ".dev"
-            //  buildConfigField 'String', 'BASE_URL', '"http://192.168.86.39:8036/"'
             buildConfigField 'String', 'BASE_URL', '"http://103.99.149.26:8036/"'
             resValue "string", "app_name", "Amazon Delivery Dev"
+        }
+        devLocal {
+            applicationIdSuffix ".devLoc"
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.43.136:8036/"'
+          //  buildConfigField 'String', 'BASE_URL', '"http://192.168.86.39:8036/"'
+            resValue "string", "app_name", "Amazon Delivery Dev Loc"
         }
         prod {
             dimension "environment"
             buildConfigField 'String', 'BASE_URL', '""'
             resValue "string", "app_name", "Amazon Delivery"
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -95,6 +109,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation "android.arch.lifecycle:extensions:1.1.1"
-//  End Region
+    //  End Region
+
+    //Region Viewmodel
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    //  End Region
 
 }

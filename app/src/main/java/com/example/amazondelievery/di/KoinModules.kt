@@ -7,12 +7,10 @@ import com.example.amazondelievery.data.api.http.createApi
 import com.example.amazondelievery.data.api.service.AuthenticationApi
 import com.example.amazondelievery.data.api.service.HomeApi
 import com.example.amazondelievery.data.preference.IPreferenceManager
+import com.example.amazondelievery.data.repository.IAuthenticationRepository
 import com.example.amazondelievery.data.repository.IDashboardRepository
-import com.example.amazondelievery.data.repository.ILoginRepository
-import com.example.amazondelievery.data.repository.ISplashRepository
 import com.example.amazondelievery.data.viewmodel.DashboardViewModel
-import com.example.amazondelievery.data.viewmodel.LoginViewModel
-import com.example.amazondelievery.data.viewmodel.SplashViewModel
+import com.example.amazondelievery.data.viewmodel.AuthenticationViewModel
 import com.example.amazondelievery.di.utility.Pref.AMAZON_SHARED_PREFERENCES
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -25,14 +23,12 @@ val NETWORKING_MODULE = module {
 }
 
 val REPOSITORY_MODULE = module {
-    single { ILoginRepository.getInstance(get()) }
-    single { ISplashRepository.getInstance(get()) }
+    single { IAuthenticationRepository.getInstance(get()) }
     single { IDashboardRepository.getInstance(get()) }
 }
 
 val VIEW_MODEL_MODULE = module {
-    viewModel { LoginViewModel(get(), IPreferenceManager.getPrefInstance(androidContext())) }
-    viewModel { SplashViewModel(get(), IPreferenceManager.getPrefInstance(androidContext())) }
+    viewModel { AuthenticationViewModel(get(), IPreferenceManager.getPrefInstance(androidContext())) }
     viewModel { DashboardViewModel(get(), IPreferenceManager.getPrefInstance(androidContext())) }
 }
 

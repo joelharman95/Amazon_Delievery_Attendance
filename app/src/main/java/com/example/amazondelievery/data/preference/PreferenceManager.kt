@@ -12,6 +12,8 @@ class PreferenceManager(private val context: Context) : IPreferenceManager {
 
     override fun saveToken(token: String?) = pref.edit().putString(TOKEN, token).apply()
 
+    override fun clearToken() = pref.edit().putString(TOKEN, "").apply()
+
     override fun getToken(): String = pref.getString(TOKEN, "").toString()
 
     override fun saveVerifyStatus(verifyStatus: Boolean) = pref.edit().putBoolean(VERIFY_STATUS, verifyStatus).apply()

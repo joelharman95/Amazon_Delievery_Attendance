@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amazondelievery.ui.launch.fragment.credential.PersonalDetailsFragment">
+    tools:context="com.example.amazondelievery.ui.credential.PersonalDetailsFragment">
 
     <include layout="@layout/layout_toolbar" />
 
@@ -94,6 +94,7 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etAccountNo"
                     android:inputType="number"
+                    android:maxLength="18"
                     style="@style/LoginEditText" />
             </com.google.android.material.textfield.TextInputLayout>
 

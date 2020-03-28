@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.amazondelievery.ui.launch.fragment.home.employee.EmployeeFragment">
+    tools:context="com.example.amazondelievery.ui.home.employee.EmployeeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvEmployee"
@@ -14,5 +14,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:itemCount="6"
         tools:listitem="@layout/layout_employee_item" />
+
+    <ProgressBar
+        android:id="@+id/pbEmployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoEmployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_no_ones_available"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

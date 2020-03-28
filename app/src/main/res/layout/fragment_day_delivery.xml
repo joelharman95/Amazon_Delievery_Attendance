@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.amazondelievery.ui.launch.fragment.home.leaverequest.LeaveRequestFragment">
+    tools:context="com.example.amazondelievery.ui.home.leaverequest.LeaveRequestFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivHeader"
@@ -101,5 +101,24 @@
         app:layout_constraintTop_toBottomOf="@id/tvDeliveryBoy"
         tools:itemCount="6"
         tools:listitem="@layout/layout_leave_request_item" />
+
+    <ProgressBar
+        android:id="@+id/pbDayDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDeliveryBoy" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_no_ones_available"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDeliveryBoy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

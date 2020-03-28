@@ -6,11 +6,12 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spPermission"
+        android:id="@+id/spType"
         android:layout_width="match_parent"
+        android:background="@drawable/edit_text_background"
         android:layout_height="?attr/actionBarSize" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <!--<com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilSelectTime"
         style="@style/LoginTextInput"
         android:layout_marginTop="@dimen/spacing_normal"
@@ -20,9 +21,45 @@
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/etSelectTime"
             style="@style/LoginEditText" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>-->
 
-    <com.google.android.material.textfield.TextInputLayout
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectDate"
+        style="@style/LoginEditText"
+        android:enabled="false"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/spacing_small"
+        android:drawablePadding="@dimen/spacing_small"
+        android:drawableStart="@drawable/icon_date"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/label_select_date" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectTimeDate1"
+        android:paddingStart="@dimen/spacing_small"
+        style="@style/LoginEditText"
+        android:enabled="false"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/spacing_small"
+        android:drawableStart="@drawable/icon_time"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/label_select_time" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectTimeDate2"
+        android:paddingStart="@dimen/spacing_small"
+        style="@style/LoginEditText"
+        android:enabled="false"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/spacing_small"
+        android:drawableStart="@drawable/icon_time"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/label_select_time" />
+
+    <!--<com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilSelectDate"
         style="@style/LoginTextInput"
         android:hint="@string/label_select_date"
@@ -31,12 +68,13 @@
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/etSelectDate"
             style="@style/LoginEditText" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilMessage"
         style="@style/LoginTextInput"
         android:hint="@string/label_message"
+        android:layout_marginTop="@dimen/spacing_normal"
         app:hintTextColor="@color/black">
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -50,9 +88,11 @@
 
     <com.google.android.material.button.MaterialButton
         style="@style/CircularButton"
+        android:id="@+id/btnSendLeaveReq"
         android:layout_gravity="end"
         android:backgroundTint="@color/light_black"
         android:text="@string/action_send"
+        android:enabled="false"
         app:cornerRadius="@dimen/spacing_medium" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

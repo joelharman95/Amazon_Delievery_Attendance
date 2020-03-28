@@ -30,7 +30,6 @@
         android:layout_margin="@dimen/spacing_small"
         android:fontFamily="@font/poppins_semibold"
         android:padding="@dimen/spacing_small"
-        android:text="Name"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@id/tvBase"
         app:layout_constraintStart_toEndOf="@id/ivProfilePic"
@@ -44,7 +43,7 @@
         android:layout_marginStart="@dimen/spacing_small"
         android:fontFamily="@font/poppins_medium"
         android:padding="@dimen/spacing_small"
-        android:text="+91 9876543210"
+        tools:text="+91 9876543210"
         app:layout_constraintStart_toEndOf="@id/ivProfilePic"
         app:layout_constraintTop_toBottomOf="@id/tvName" />
 
@@ -54,7 +53,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:padding="@dimen/spacing_small"
-        android:text="Insurance Exp Date"
+        tools:text="Insurance Exp Date"
         android:textColor="@color/colorBorder"
         app:layout_constraintStart_toEndOf="@id/ivProfilePic"
         app:layout_constraintStart_toStartOf="@id/tvContactNo"
@@ -66,7 +65,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:padding="@dimen/spacing_small"
-        android:text="Leave(Admin)"
+        android:visibility="gone"
+        tools:text="Leave(Admin)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivProfilePic"
         app:layout_constraintStart_toStartOf="@+id/tvInsuranceExpDate"
@@ -79,7 +79,7 @@
         android:layout_marginEnd="@dimen/spacing_small"
         android:fontFamily="@font/poppins_medium"
         android:padding="@dimen/spacing_small"
-        android:text="Salaried"
+        tools:text="Salaried"
         android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="@+id/tvName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
         android:layout_marginEnd="@dimen/spacing_small"
         android:fontFamily="@font/poppins_semibold"
         android:padding="@dimen/spacing_small"
-        android:text="Bike Number"
+        tools:text="Bike Number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvBase" />
 
@@ -104,7 +104,7 @@
         android:layout_marginEnd="@dimen/spacing_small"
         android:fontFamily="@font/poppins_semibold"
         android:padding="@dimen/spacing_small"
-        android:text="Bike Model"
+        tools:text="Bike Model"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvBikeNo" />
 
@@ -117,7 +117,8 @@
         android:padding="@dimen/spacing_small"
         android:paddingStart="0dp"
         android:paddingEnd="0dp"
-        android:text="Approve"
+        android:visibility="gone"
+        tools:text="Approve"
         android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvBikeModel"

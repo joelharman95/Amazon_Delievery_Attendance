@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.example.amazondelievery.ui.launch.fragment.credential.VehicleDetailsFragment">
+    tools:context="com.example.amazondelievery.ui.credential.VehicleDetailsFragment">
 
     <include layout="@layout/layout_toolbar" />
 
@@ -59,15 +59,17 @@
                     android:hint="@string/label_insurance_no" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilInsuranceExpDate"
-                style="@style/LoginTextInput">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etInsuranceExpDate"
-                    style="@style/LoginEditText"
-                    android:hint="@string/label_exp_date" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInsuranceExpDate"
+                style="@style/LoginEditText"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/spacing_small"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableStart="@drawable/icon_date"
+                android:textColor="@color/light_black"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/label_exp_date" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilRCBoolNo"

@@ -1,16 +1,26 @@
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amazondelievery.ui.launch.fragment.credential.PhotoProofsFragment">
+    tools:context="com.example.amazondelievery.ui.credential.PhotoProofsFragment">
 
-    <include layout="@layout/layout_toolbar" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarStyle"
+        app:navigationIcon="@drawable/icon_back"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/label_login"
+        app:titleTextAppearance="@style/ToolbarTextAppearance"
+        app:titleTextColor="@color/colorAccent"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/tbar"
         android:layout_margin="@dimen/spacing_normal"
         android:orientation="vertical"
         android:weightSum="4">
@@ -29,8 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -53,8 +63,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_tiny"
             android:layout_weight="1"
-            android:foreground="?attr/selectableItemBackground"
             android:background="@drawable/edit_text_background"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/spacing_tiny"
             app:cardElevation="@dimen/spacing_tiny">
 
@@ -150,4 +160,12 @@
             app:cornerRadius="@dimen/spacing_medium" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-</androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ProgressBar
+        android:id="@+id/pbUploader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

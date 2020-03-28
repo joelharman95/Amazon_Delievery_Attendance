@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.amazondelievery.ui.launch.splash.SplashFragment"
+        android:name="com.example.amazondelievery.ui.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
 
@@ -22,7 +22,7 @@
             app:popUpTo="@id/mainNavigation"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_splashFragment_to_relaxFrag"
+            android:id="@+id/action_splash_to_relaxFrag"
             app:destination="@id/relaxFrag"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
@@ -32,7 +32,7 @@
             app:popUpTo="@id/mainNavigation"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_splashFragment_to_dashboardFrag"
+            android:id="@+id/action_splash_to_dashboardFrag"
             app:destination="@id/dashboardFrag"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
@@ -41,12 +41,22 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/mainNavigation"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_personalDetails"
+            app:destination="@id/personalDetailsFrag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/mainNavigation"
+            app:popUpToInclusive="true"/>
 
     </fragment>
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.amazondelievery.ui.launch.fragment.credential.LoginFragment"
+        android:name="com.example.amazondelievery.ui.credential.LoginFragment"
         android:label=" "
         tools:layout="@layout/fragment_login">
 
@@ -84,7 +94,7 @@
 
     <fragment
         android:id="@+id/personalDetailsFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.credential.PersonalDetailsFragment"
+        android:name="com.example.amazondelievery.ui.credential.PersonalDetailsFragment"
         android:label="Personal Details"
         tools:layout="@layout/fragment_personal_details">
         <action
@@ -98,7 +108,7 @@
 
     <fragment
         android:id="@+id/vehicleDetailsFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.credential.VehicleDetailsFragment"
+        android:name="com.example.amazondelievery.ui.credential.VehicleDetailsFragment"
         android:label="Vehicle Details"
         tools:layout="@layout/fragment_vehicle_details">
         <action
@@ -112,7 +122,7 @@
 
     <fragment
         android:id="@+id/photoProofsFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.credential.PhotoProofsFragment"
+        android:name="com.example.amazondelievery.ui.credential.PhotoProofsFragment"
         android:label="Photo Proofs"
         tools:layout="@layout/fragment_photo_proofs">
         <action
@@ -126,37 +136,44 @@
 
     <fragment
         android:id="@+id/relaxFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.home.RelaxFragment"
+        android:name="com.example.amazondelievery.ui.home.RelaxFragment"
         android:label="Relax"
         tools:layout="@layout/fragment_relax"/>
 
     <fragment
         android:id="@+id/dashboardFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.home.dashboard.DashboardFragment"
+        android:name="com.example.amazondelievery.ui.home.dashboard.DashboardFragment"
         android:label="Dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFrag_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/mainNavigation"/>
+    </fragment>
 
     <fragment
         android:id="@+id/employeeFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.home.employee.EmployeeFragment"
+        android:name="com.example.amazondelievery.ui.home.employee.EmployeeFragment"
         android:label="Employee"
         tools:layout="@layout/fragment_employee" />
 
     <fragment
         android:id="@+id/taskFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.home.TaskOrLeaveFragment"
+        android:name="com.example.amazondelievery.ui.home.TaskOrLeaveFragment"
         android:label="Task"
         tools:layout="@layout/fragment_task_or_leave" />
 
     <fragment
         android:id="@+id/dayDeliveryFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.home.daydelivery.DayDeliveryFragment"
+        android:name="com.example.amazondelievery.ui.home.daydelivery.DayDeliveryFragment"
         android:label="Day Delivery"
         tools:layout="@layout/fragment_day_delivery" />
 
     <fragment
         android:id="@+id/leaveRequestFrag"
-        android:name="com.example.amazondelievery.ui.launch.fragment.home.leaverequest.LeaveRequestFragment"
+        android:name="com.example.amazondelievery.ui.home.leaverequest.LeaveRequestFragment"
         android:label="Request"
         tools:layout="@layout/fragment_leave_request" />
 
